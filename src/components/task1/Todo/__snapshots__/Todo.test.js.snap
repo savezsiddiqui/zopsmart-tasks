@@ -1,0 +1,223 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should not add edited todo 1`] = `
+<div
+  className="root"
+>
+  <section
+    className="fixed-top"
+  >
+    <h1
+      className="display-4"
+    >
+      TODO
+    </h1>
+    <input
+      className="custom-input"
+      id="todo-input"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="add todo"
+      type="text"
+      value=""
+    />
+  </section>
+  <section
+    className="todo-container"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="todo-wrapper"
+      >
+        <div
+          className="todo"
+          onClick={[Function]}
+        >
+          <i
+            className="far far fa-circle"
+          />
+          <p>
+            test-todo-4-edited
+          </p>
+        </div>
+        <div
+          className="options"
+        >
+          <i
+            className="far far fa-trash-alt fa-trash-alt"
+            data-testid="delete-button"
+            onClick={[Function]}
+          />
+          <i
+            className="fas fas fa-pencil-alt fa-pencil-alt"
+            data-testid="edit-button"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="todo-wrapper"
+      >
+        <div
+          className="todo"
+          onClick={[Function]}
+        >
+          <i
+            className="far far fa-check-circle"
+          />
+          <p>
+            <strike
+              data-testid="strike-through"
+            >
+              test-todo-2
+            </strike>
+          </p>
+        </div>
+        <div
+          className="options"
+        >
+          <i
+            className="far far fa-trash-alt fa-trash-alt"
+            data-testid="delete-button"
+            onClick={[Function]}
+          />
+          <i
+            className="fas fas fa-pencil-alt fa-pencil-alt"
+            data-testid="edit-button"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="todo-wrapper"
+      >
+        <div
+          className="todo"
+          onClick={[Function]}
+        >
+          <i
+            className="far far fa-circle"
+          />
+          <p>
+            test-todo-1
+          </p>
+        </div>
+        <div
+          className="options"
+        >
+          <i
+            className="far far fa-trash-alt fa-trash-alt"
+            data-testid="delete-button"
+            onClick={[Function]}
+          />
+          <i
+            className="fas fas fa-pencil-alt fa-pencil-alt"
+            data-testid="edit-button"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`should not add todo 1`] = `
+<div
+  className="root"
+>
+  <section
+    className="fixed-top"
+  >
+    <h1
+      className="display-4"
+    >
+      TODO
+    </h1>
+    <input
+      className="custom-input"
+      id="todo-input"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="add todo"
+      type="text"
+      value=""
+    />
+  </section>
+  <section
+    className="todo-container"
+  >
+    <div
+      className="card"
+    >
+      <div
+        className="todo-wrapper"
+      >
+        <div
+          className="todo"
+          onClick={[Function]}
+        >
+          <i
+            className="far far fa-circle"
+          />
+          <p>
+            test-todo-1
+          </p>
+        </div>
+        <div
+          className="options"
+        >
+          <i
+            className="far far fa-trash-alt fa-trash-alt"
+            data-testid="delete-button"
+            onClick={[Function]}
+          />
+          <i
+            className="fas fas fa-pencil-alt fa-pencil-alt"
+            data-testid="edit-button"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`should render App correctly 1`] = `
+<div
+  className="root"
+>
+  <section
+    className="fixed-top"
+  >
+    <h1
+      className="display-4"
+    >
+      TODO
+    </h1>
+    <input
+      className="custom-input"
+      id="todo-input"
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="add todo"
+      type="text"
+      value=""
+    />
+  </section>
+  <section
+    className="todo-container"
+  />
+</div>
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders app 1`] = `
+<div
+  className="content"
+>
+  <div
+    className="root"
+  >
+    <div
+      className="header"
+    >
+      <h2
+        className="text"
+      >
+        Boards
+      </h2>
+      <div
+        className="margin-start"
+      >
+        <input
+          className="custom-input"
+          onChange={[Function]}
+          placeholder="filter boards"
+        />
+      </div>
+    </div>
+    <div
+      className="board-container"
+    >
+      <div
+        className="board"
+      >
+        <p
+          className="text"
+          onClick={[Function]}
+        >
+          + add board
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

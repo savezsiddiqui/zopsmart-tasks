@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render App correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="todo-wrapper"
+  >
+    <div
+      className="todo"
+      onClick={[Function]}
+    >
+      <i
+        className="far far fa-circle"
+      />
+      <p>
+        random-todo
+      </p>
+    </div>
+    <div
+      className="options"
+    >
+      <i
+        className="far far fa-trash-alt fa-trash-alt"
+        data-testid="delete-button"
+        onClick={[Function]}
+      />
+      <i
+        className="fas fas fa-pencil-alt fa-pencil-alt"
+        data-testid="edit-button"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
