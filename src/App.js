@@ -2,12 +2,12 @@ import React from 'react'
 import Home from './components/task2/Home/Home'
 import Board from './components/task2/Board/Board'
 import Todo from './components/task1/Todo/Todo'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 import './App.css'
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="content">
         <Switch>
           <Route exact path="/">
@@ -24,7 +24,7 @@ const App = () => {
           </Route>
         </Switch>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
