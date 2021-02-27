@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { token, key } from '../config/config.json'
 import { Link } from 'react-router-dom'
+import Header from '../Header/Header'
 import axios from 'axios'
 import '../task2.css'
 
@@ -23,21 +24,7 @@ const Home = () => {
 
   return (
     <div className="root">
-      <div className="header">
-        <h2 className="text">Boards</h2>
-        <div className="margin-start">
-          <input
-            className="custom-input"
-            placeholder="filter boards"
-            onChange={(e) => {
-              const newFilteredBoards = boards.filter(({ name }) =>
-                name.toLowerCase().includes(e.target.value.toLowerCase())
-              )
-              setFilteredBoards(newFilteredBoards)
-            }}
-          />
-        </div>
-      </div>
+      <Header setFilteredBoards={setFilteredBoards} boards={boards} />
       <div className="board-container">
         {filteredBoards &&
           filteredBoards.map(({ name, id, prefs: { backgroundImage } }) => (

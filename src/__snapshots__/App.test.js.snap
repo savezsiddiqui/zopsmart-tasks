@@ -7,22 +7,91 @@ exports[`renders app 1`] = `
   <div
     className="root"
   >
-    <div
-      className="header"
-    >
-      <h2
-        className="text"
-      >
-        Boards
-      </h2>
+    <div>
       <div
-        className="margin-start"
+        className="header"
       >
-        <input
-          className="custom-input"
-          onChange={[Function]}
-          placeholder="filter boards"
-        />
+        <div
+          className="header-container"
+        >
+          <div
+            className="header__icons"
+          >
+            <i
+              className="fas fa-th"
+            />
+          </div>
+          <div
+            className="header__icons"
+          >
+            <i
+              className="fas fa-home"
+            />
+          </div>
+          <div
+            className="header__icons d-sm"
+          >
+            <i
+              className="fa fa-trello"
+            />
+            <p
+              className="header__p"
+            >
+              Boards
+            </p>
+          </div>
+          <div
+            className="header__icons"
+          >
+            <i
+              className="fas fa-search"
+              data-testid="search-button"
+              onClick={[Function]}
+            />
+          </div>
+        </div>
+        <div
+          className="header-logo"
+        >
+          <i
+            className="fa fa-trello"
+          />
+          <p
+            className="header__p"
+          >
+            Trello
+          </p>
+        </div>
+        <div
+          className="header-container"
+        >
+          <div
+            className="header__icons"
+          >
+            <i
+              className="fas fa-plus"
+            />
+          </div>
+          <div
+            className="header__icons d-sm"
+          >
+            <i
+              className="fas fa-exclamation-circle"
+            />
+          </div>
+          <div
+            className="header__icons red"
+          >
+            <i
+              className="far fa-bell"
+            />
+          </div>
+          <div
+            className="header__icons__circle"
+          >
+            SS
+          </div>
+        </div>
       </div>
     </div>
     <div

@@ -2,23 +2,33 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { key, token } from '../config/config.json'
 
-const Card = ({ name, cardId, getCards }) => {
+const Card = ({ name, cardId, getCards, setLoading, setError }) => {
   const [editUi, toggleEditUi] = useState(false)
   const [cardInput, setCardInput] = useState(name)
   const deleteCard = async () => {
-    await axios.delete(
-      `https://api.trello.com/1/cards/${cardId}?key=${key}&token=${token}`
-    )
-    getCards()
+    try {
+      setLoading(true)
+      await axios.delete(
+        `https://api.trello.com/1/cards/${cardId}?key=${key}&token=${token}`
+      )
+      getCards()
+    } catch (error) {
+      setLoading(false)
+      setError(error.message)
+    }
   }
 
   const _onSubmit = async (e) => {
-    e.preventDefault()
-    await axios.put(
-      `https://api.trello.com/1/cards/${cardId}?key=${key}&token=${token}`,
-      { name: cardInput }
-    )
-    toggleEditUi(!editUi)
+    try {
+      e.preventDefault()
+      await axios.put(
+        `https://api.trello.com/1/cards/${cardId}?key=${key}&token=${token}`,
+        { name: cardInput }
+      )
+      toggleEditUi(!editUi)
+    } catch (error) {
+      setError(error.message)
+    }
   }
 
   return editUi ? (

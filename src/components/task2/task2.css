@@ -14,10 +14,46 @@
   overflow-x: scroll;
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  background-color: #fafafa;
+  background-image: url('./assets/Ripple-1s-200px.svg');
+  background-size: contain;
+  height: 5rem;
+  width: 5rem;
+}
+
+.error {
+  height: 100vh;
+  width: 100vw;
+  color: #fafafa;
+  background-color: #bf360c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .root {
   background-image: url('./assets/background.jpg');
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .add-board-card {
@@ -50,7 +86,7 @@
 }
 
 .close-button:hover {
-  color: orangered;
+  color: #bf360c;
 }
 
 .list {
@@ -110,7 +146,7 @@
 .add-card-button {
   padding: 0.6rem;
   font-family: 'ubuntu';
-  color: white;
+  color: #fafafa;
   font-weight: bold;
   background-color: #43a047;
   border: none;
@@ -122,8 +158,8 @@
   border: none;
   font-family: 'ubuntu';
   font-weight: bold;
-  color: white;
-  background-color: orangered;
+  color: #fafafa;
+  background-color: #bf360c;
   padding: 0.6rem;
   margin: 0 0.5rem;
   border-radius: 2px;
@@ -141,16 +177,16 @@
 }
 
 .board {
-  background-color: gray;
+  background-color: #757575;
   position: relative;
   background-size: cover;
-  width: 9rem;
+  width: 7rem;
   height: 4.5rem;
   border-radius: 2px;
-  color: white;
+  color: #fafafa;
   padding: 1rem;
   padding-right: 2rem;
-  margin: 1rem;
+  margin: 0.5rem;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
@@ -167,7 +203,7 @@
 }
 
 .board-link {
-  color: white;
+  color: #fafafa;
   text-decoration: none;
 }
 
@@ -183,11 +219,101 @@
 }
 
 .header {
-  background-color: rgba(255, 255, 255, 0.15);
+  position: relative;
   backdrop-filter: blur(5px);
-  padding: 0.4rem 1rem;
-  color: white;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0;
+  color: #fafafa;
+}
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-45px, 2px);
+  display: flex;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.header__icons {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 0 0.15rem;
+  display: flex;
+}
+
+.red {
+  background-color: #bf360c;
+}
+
+.header__icons__circle {
+  background-color: hsla(0, 0%, 100%, 0.3);
+  color: #ffffff;
+  border: none;
+  border-radius: 26px;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 0 0.15rem;
+  display: flex;
+}
+
+.header__input {
+  border: none;
+  background-color: hsla(0, 0%, 100%, 0.3);
+  border-radius: 3px;
+  font-family: 'ubuntu';
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.header__p {
+  margin: 0;
+  padding: 0;
+  margin-left: 0.3rem;
+}
+
+.alert {
+  background-image: url('./assets/exclamation-circle-solid.svg');
+  color: yellow;
+  background-size: contain;
+  height: 5rem;
+  width: 5rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .d-sm {
+    display: none;
+  }
+
+  .board-container {
+    justify-content: center;
+  }
+}
+
+.opacity-1 {
+  opacity: 1;
 }
