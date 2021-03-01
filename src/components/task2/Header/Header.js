@@ -5,7 +5,7 @@ const Header = ({ boards, setFilteredBoards }) => {
   return (
     <div>
       <div className="header">
-        <div className="header-container">
+        <div className="header__container">
           <div className="header__icons">
             <i className="fas fa-th"></i>
           </div>
@@ -24,11 +24,11 @@ const Header = ({ boards, setFilteredBoards }) => {
             ></i>
           </div>
         </div>
-        <div className="header-logo">
+        <div className="header__logo">
           <i className="fa fa-trello"></i>
           <p className="header__p">Trello</p>
         </div>
-        <div className="header-container">
+        <div className="header__container">
           <div className="header__icons">
             <i className="fas fa-plus"></i>
           </div>
@@ -38,14 +38,14 @@ const Header = ({ boards, setFilteredBoards }) => {
           <div className="header__icons red">
             <i className="far fa-bell"></i>
           </div>
-          <div className="header__icons__circle">SS</div>
+          <div className="header__icons--circle">SS</div>
         </div>
       </div>
       {searchUi && (
-        <div className="search-wrapper">
+        <div className="search__wrapper">
           <input
             type="text"
-            className="custom-input"
+            className="customInput"
             placeholder="filter boards"
             onChange={(e) => {
               const newFilteredBoards = boards.filter(({ name }) =>

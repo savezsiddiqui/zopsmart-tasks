@@ -39,11 +39,11 @@ const Card = ({ name, cardId, getCards, setLoading, setError }) => {
           rows={3}
           cols={25}
           data-testid="edit-card-input"
-          className="custom-input"
+          className="customInput"
           value={cardInput}
           onChange={(e) => setCardInput(e.target.value)}
         />
-        <button type="submit" className="add-card-button">
+        <button type="submit" className="addCard__button">
           Update
         </button>
         <button className="cancel" onClick={() => toggleEditUi(!editUi)}>
@@ -58,7 +58,7 @@ const Card = ({ name, cardId, getCards, setLoading, setError }) => {
       </div>
       <div>
         <button
-          className="close-button"
+          className="closeButton"
           data-testid="delete-card-button"
           onClick={() => deleteCard()}
         >

@@ -12,7 +12,7 @@ exports[`renders app 1`] = `
         className="header"
       >
         <div
-          className="header-container"
+          className="header__container"
         >
           <div
             className="header__icons"
@@ -51,7 +51,7 @@ exports[`renders app 1`] = `
           </div>
         </div>
         <div
-          className="header-logo"
+          className="header__logo"
         >
           <i
             className="fa fa-trello"
@@ -63,7 +63,7 @@ exports[`renders app 1`] = `
           </p>
         </div>
         <div
-          className="header-container"
+          className="header__container"
         >
           <div
             className="header__icons"
@@ -87,7 +87,7 @@ exports[`renders app 1`] = `
             />
           </div>
           <div
-            className="header__icons__circle"
+            className="header__icons--circle"
           >
             SS
           </div>
@@ -95,17 +95,116 @@ exports[`renders app 1`] = `
       </div>
     </div>
     <div
-      className="board-container"
+      className="flex__row"
     >
       <div
-        className="board"
+        className="sidebar d-sm"
       >
-        <p
-          className="text"
-          onClick={[Function]}
+        <div>
+          <div>
+            <i
+              className="fa fa-trello p-1"
+            />
+            Boards
+          </div>
+          <div>
+            <i
+              className="fa fa-trello p-1"
+            />
+            Template
+          </div>
+          <div>
+            <i
+              className="fas fa-wave-square p-1"
+            />
+            Home
+          </div>
+        </div>
+        <div
+          className="sidebar__teams"
         >
-          + add board
-        </p>
+          <div>
+            TEAMS
+          </div>
+          <div
+            className="font--lg"
+          >
+            +
+          </div>
+        </div>
+        <div
+          className="sidebar__workspace"
+        >
+          <div
+            className="flex__row"
+          >
+            <i
+              className="fas fa-user-friends p-1"
+            />
+            <div>
+              Savez Siddiqui's 
+              <br />
+              Workspace
+            </div>
+          </div>
+          <i
+            className="fas fa-chevron-down p-1"
+          />
+        </div>
+        <div
+          className="sidebar__bottom"
+        >
+          <div>
+            <i
+              className="far fa-check-square p-1"
+            />
+            Getting started
+          </div>
+          <div>
+            <i
+              className="fa fa-trello p-1"
+            />
+            Boards
+          </div>
+          <div>
+            <i
+              className="far fa-heart p-1"
+            />
+            Highlights
+          </div>
+          <div>
+            <i
+              className="fas fa-table p-1"
+            />
+            Team Table
+          </div>
+          <div>
+            <i
+              className="fas fa-user-friends p-1"
+            />
+            Members
+          </div>
+          <div>
+            <i
+              className="fas fa-cog p-1"
+            />
+            Settings
+          </div>
+        </div>
+      </div>
+      <div
+        className="board__container"
+      >
+        <div
+          className="board"
+        >
+          <p
+            className="text"
+            onClick={[Function]}
+          >
+            + add board
+          </p>
+        </div>
       </div>
     </div>
   </div>

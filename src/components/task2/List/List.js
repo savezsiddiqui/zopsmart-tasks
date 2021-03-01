@@ -61,7 +61,7 @@ const List = ({ name, listId, getLists, setError }) => {
   if (isLoading) {
     return (
       <div className="list">
-        <div className="loading-div">
+        <div className="loading__div">
           <div className="spinner"></div>
         </div>
       </div>
@@ -87,12 +87,12 @@ const List = ({ name, listId, getLists, setError }) => {
             >
               <input
                 type="text"
-                className="custom-input"
+                className="customInput"
                 data-testid="list-edit-input"
                 value={listName}
                 onChange={(e) => setListName(e.target.value)}
               />
-              <button type="submit" className="add-card-button">
+              <button type="submit" className="addCard__button">
                 Update
               </button>
               <button
@@ -105,14 +105,14 @@ const List = ({ name, listId, getLists, setError }) => {
           ) : (
             <div>
               <button
-                className="close-button"
+                className="closeButton"
                 data-testid="archive-list-button"
                 onClick={() => archiveList(listId)}
               >
                 <i className="far fa-trash-alt"></i>
               </button>
               <p
-                className="text list-title"
+                className="text list__title"
                 data-testid="list-name"
                 onClick={() => toggleListEditUi(!listEditUi)}
               >
@@ -122,7 +122,7 @@ const List = ({ name, listId, getLists, setError }) => {
           )}
         </div>
 
-        <div className="card-container">
+        <div className="card__container">
           {cardlist &&
             cardlist.map(({ id, name }) => (
               <Card
@@ -141,13 +141,13 @@ const List = ({ name, listId, getLists, setError }) => {
             <textarea
               rows={3}
               cols={25}
-              className="custom-input"
+              className="customInput"
               placeholder="enter a title for this card"
               value={cardName}
               onChange={(e) => setCardName(e.target.value)}
             />
-            <div className="add-card-ui">
-              <button className="add-card-button" type="submit">
+            <div className="addCard-ui">
+              <button className="addCard__button" type="submit">
                 Add Card
               </button>
               <button
@@ -161,7 +161,7 @@ const List = ({ name, listId, getLists, setError }) => {
           </form>
         ) : (
           <button
-            className="add-card"
+            className="addCard"
             onClick={() => toggleAddCardVisibility(!addCardVisibility)}
           >
             + add another card

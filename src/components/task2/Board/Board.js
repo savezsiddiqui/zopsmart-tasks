@@ -87,10 +87,10 @@ const Board = () => {
           board.background && { backgroundImage: `url(${board.background})` }
         }
       >
-        <div className="header margin-start opacity-1">
+        <div className="header margin--start opacity-1">
           {boardEditUi ? (
             <form
-              className="board-edit-form"
+              className="boardEditForm"
               onSubmit={async (e) => {
                 try {
                   e.preventDefault()
@@ -107,7 +107,7 @@ const Board = () => {
               <input
                 type="text"
                 data-testid="edit-board-input"
-                className="custom-input"
+                className="customInput"
                 value={board.name}
                 onChange={(e) =>
                   setBoard({
@@ -116,8 +116,8 @@ const Board = () => {
                   })
                 }
               />
-              <div className="margin-start">
-                <button type="submit" className="add-card-button">
+              <div className="margin--start">
+                <button type="submit" className="addCard__button">
                   Update
                 </button>
                 <button
@@ -138,7 +138,7 @@ const Board = () => {
             </h2>
           )}
         </div>
-        <div className="list-container">
+        <div className="list__container">
           {board.lists &&
             board.lists.map(({ id, name }) => (
               <List
@@ -150,19 +150,19 @@ const Board = () => {
                 setError={setError}
               />
             ))}
-          <div className="add-list">
+          <div className="addList">
             {addListUi ? (
               <form onSubmit={(e) => _onSubmit(e)}>
                 <textarea
                   rows={3}
                   cols={25}
-                  className="custom-input"
+                  className="customInput"
                   placeholder="enter a title for this card"
                   value={newListName}
                   onChange={(e) => setNewListName(e.target.value)}
                 />
-                <div className="add-card-ui">
-                  <button className="add-card-button" type="submit">
+                <div className="addCard-ui">
+                  <button className="addCard__button" type="submit">
                     Add Card
                   </button>
                   <button
@@ -176,7 +176,7 @@ const Board = () => {
               </form>
             ) : (
               <p
-                className="text add-card"
+                className="text addCard"
                 onClick={() => toggleAddListUi(!addListUi)}
               >
                 + add a new list

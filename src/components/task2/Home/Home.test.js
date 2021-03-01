@@ -11,6 +11,26 @@ import {
 import axios from 'axios'
 import { MemoryRouter } from 'react-router-dom'
 
+describe('test for error', () => {
+  test('should log error', () => {
+    const spy = jest
+      .spyOn(axios, 'get')
+      .mockImplementation(() => Promise.reject(new Error('Error')))
+
+    const RenderWithRouter = () => (
+      <MemoryRouter>
+        <Home />
+      </MemoryRouter>
+    )
+
+    act(() => {
+      render(<RenderWithRouter />)
+    })
+
+    expect(spy).toHaveBeenCalledTimes(1)
+  })
+})
+
 describe('tests for Home', () => {
   let container = null
 

@@ -1,14 +1,15 @@
-.text-center {
+.text--center {
   text-align: center;
 }
 
-.board-container {
+.board__container {
+  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.list-container {
+.list__container {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -21,7 +22,7 @@
   height: 100vh;
 }
 
-.loading-div {
+.loading__div {
   height: 100%;
   width: 100%;
   display: flex;
@@ -56,7 +57,7 @@
   min-height: 100vh;
 }
 
-.add-board-card {
+.addBoard__card {
   margin: 1rem;
   padding: 0.5rem;
 }
@@ -77,7 +78,7 @@
   background-color: #e0e0e0;
 }
 
-.close-button {
+.closeButton {
   position: absolute;
   right: 5px;
   top: 10px;
@@ -85,7 +86,7 @@
   background: transparent;
 }
 
-.close-button:hover {
+.closeButton:hover {
   color: #bf360c;
 }
 
@@ -100,7 +101,7 @@
   border-radius: 2px;
 }
 
-.add-list {
+.addList {
   background-color: #e0e0e0;
   width: 18rem;
   min-width: 18rem;
@@ -111,12 +112,12 @@
   border-radius: 2px;
 }
 
-.card-container {
+.card__container {
   max-height: 70vh;
   overflow-y: scroll;
 }
 
-.add-card {
+.addCard {
   width: 100%;
   background: transparent;
   border: none;
@@ -128,11 +129,11 @@
   text-align: left;
 }
 
-.add-card:hover {
+.addCard:hover {
   color: #006064;
 }
 
-.custom-input {
+.customInput {
   border: 1px solid #eeeeee;
   background-color: #bdbdbd;
   border-radius: 2px;
@@ -143,7 +144,7 @@
   margin: 0.5rem 0;
 }
 
-.add-card-button {
+.addCard__button {
   padding: 0.6rem;
   font-family: 'ubuntu';
   color: #fafafa;
@@ -166,12 +167,12 @@
   box-shadow: 0 0 4px #ff6e40;
 }
 
-.card-container::-webkit-scrollbar,
-.list-container::-webkit-scrollbar {
+.card__container::-webkit-scrollbar,
+.list__container::-webkit-scrollbar {
   display: none;
 }
 
-.list-title {
+.list__title {
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -192,17 +193,17 @@
   font-size: 1.2rem;
 }
 
-.margin-start {
+.margin--start {
   margin-left: 1rem;
 }
 
-.board-edit-form {
+.boardEditForm {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.board-link {
+.board__link {
   color: #fafafa;
   text-decoration: none;
 }
@@ -230,7 +231,7 @@
   color: #fafafa;
 }
 
-.header-logo {
+.header__logo {
   position: absolute;
   left: 50%;
   transform: translate(-45px, 2px);
@@ -241,12 +242,12 @@
   padding: 0;
 }
 
-.search-wrapper {
+.search__wrapper {
   display: flex;
   justify-content: center;
 }
 
-.header-container {
+.header__container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -267,7 +268,7 @@
   background-color: #bf360c;
 }
 
-.header__icons__circle {
+.header__icons--circle {
   background-color: hsla(0, 0%, 100%, 0.3);
   color: #ffffff;
   border: none;
@@ -297,7 +298,7 @@
 
 .alert {
   background-image: url('./assets/exclamation-circle-solid.svg');
-  color: yellow;
+  color: #fdd835;
   background-size: contain;
   height: 5rem;
   width: 5rem;
@@ -309,11 +310,55 @@
     display: none;
   }
 
-  .board-container {
+  .board__container {
     justify-content: center;
   }
 }
 
 .opacity-1 {
   opacity: 1;
+}
+
+.sidebar {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  padding: 0.5rem;
+  width: 14rem;
+  min-width: 14rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.sidebar__teams {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  padding-left: 1rem;
+  font-weight: normal;
+  align-items: center;
+}
+
+.sidebar__workspace {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p-1 {
+  padding: 0.5rem 1rem;
+}
+
+.font--lg {
+  font-size: 1.5rem;
+}
+
+.flex__row {
+  display: flex;
+}
+
+.sidebar__bottom {
+  padding-left: 1rem;
+  margin: 1rem;
+  font-weight: normal;
+  font-size: 0.9rem;
 }
