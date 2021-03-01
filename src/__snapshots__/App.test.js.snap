@@ -28,8 +28,10 @@ exports[`renders app 1`] = `
               className="fas fa-home"
             />
           </div>
-          <div
+          <a
             className="header__icons d-sm"
+            href="/boards"
+            onClick={[Function]}
           >
             <i
               className="fa fa-trello"
@@ -39,7 +41,7 @@ exports[`renders app 1`] = `
             >
               Boards
             </p>
-          </div>
+          </a>
           <div
             className="header__icons"
           >

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const Header = ({ boards, setFilteredBoards }) => {
+const Header = ({ boards, setFilteredBoards, searchVisible = true }) => {
   const [searchUi, toggleSearchUi] = useState(false)
   return (
     <div>
@@ -12,17 +13,19 @@ const Header = ({ boards, setFilteredBoards }) => {
           <div className="header__icons">
             <i className="fas fa-home"></i>
           </div>
-          <div className="header__icons d-sm">
+          <Link to={'../boards'} className="header__icons d-sm">
             <i className="fa fa-trello"></i>
             <p className="header__p">Boards</p>
-          </div>
-          <div className="header__icons">
-            <i
-              className="fas fa-search"
-              onClick={() => toggleSearchUi(!searchUi)}
-              data-testid="search-button"
-            ></i>
-          </div>
+          </Link>
+          {searchVisible && (
+            <div className="header__icons">
+              <i
+                className="fas fa-search"
+                onClick={() => toggleSearchUi(!searchUi)}
+                data-testid="search-button"
+              ></i>
+            </div>
+          )}
         </div>
         <div className="header__logo">
           <i className="fa fa-trello"></i>

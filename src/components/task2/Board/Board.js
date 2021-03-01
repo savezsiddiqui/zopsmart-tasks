@@ -3,6 +3,7 @@ import { token, key } from '../config/config.json'
 import { useParams } from 'react-router-dom'
 import List from '../List/List'
 import axios from 'axios'
+import Header from '../Header/Header'
 import '../task2.css'
 
 const Board = () => {
@@ -87,6 +88,7 @@ const Board = () => {
           board.background && { backgroundImage: `url(${board.background})` }
         }
       >
+        <Header searchVisible={false} />
         <div className="header margin--start opacity-1">
           {boardEditUi ? (
             <form
